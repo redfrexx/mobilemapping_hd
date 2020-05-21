@@ -23,7 +23,7 @@ def make_plot(criteria, sub_criteria, data, outfile, show=False):
     """
     color_dict = {"sehr gut": 'rgb(0,104,55)', "gut": 'rgb(102,189,99)', "tendenziell eher gut": 'rgb(217,239,139)',
                   "tendenziell eher schlecht": 'rgb(254,224,139)', "schlecht": 'rgb(244,109,67)',
-                  "sehr schlecht": 'rgb(165,0,38)'}
+                  "sehr schlecht": 'rgb(165,0,38)', "-": 'rgb(169,169,169)'}
 
     sub_data = data.loc[:, sub_criteria]
     sub_data["desc"] = sub_data.apply(lambda row: "<br>".join(["<b>{}</b>: <i>{}</i>".format(k, v)
