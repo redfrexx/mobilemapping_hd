@@ -17,11 +17,11 @@ Ergebnisses dar, sondern visualisierte Sammlungen dennoch ernstzunehmender subje
 Eindrücke. Vielen Dank an alle Personen, die zu diesem Ergebnis beigetragen haben!
 
 Wer weiterhin Interesse daran hat, unsere Heidelberger Radwege zu bewerten,
-findet das Formular <a href="https://ee.kobotoolbox.org/x/ZZ1fUFa1">hier</a>. Die Karten
-werden in regelmäßigen Abständen (wie oft??) geupdatet. Falls Ihr weitere Fragen
+findet das Formular <a href="https://ee.kobotoolbox.org/x/ZZ1fUFa1">hier</a>. Bei Bedarf werden wir die Karten in regelmäßigen Abständen aktualisieren. Falls Ihr weitere Fragen
 oder Feedback habt, schreibt gerne eine Nachricht an <a href = "mailto: disastermappersconnection@googlegroups.com">disastermappersconnection@googlegroups.com</a>
 
-Die Daten in diesem Repository sind frei verfügbar und sind über die [ODC-By v1.0](https://opendatacommons.org/licenses/by/1-0/index.html) lizensiert. Was das für die Nutzung der Daten heißt ist [hier](https://opendatacommons.org/licenses/by/summary/index.html) kurz erklärt.
+Die Daten in diesem Repository sind frei verfügbar und sind über die [ODC-By v1.0](https://opendatacommons.org/licenses/by/1-0/index.html) lizensiert. Das heißt, die Daten dürfen frei geteilt, bearbeitet und weiterverbreitet werden solange der Urheber der Daten genannt wird.
+
 
 
 
