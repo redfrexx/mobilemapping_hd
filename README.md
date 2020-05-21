@@ -1,37 +1,29 @@
-## Welcome to GitHub Pages
+# Mobile Mapping Event “Nachhaltige Mobilität in Heidelberg”
 
-You can use the [editor on GitHub](https://github.com/redfrexx/mobilemapping_hd/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+## Subjektive Bewertung der Heidelberger Radwege
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Am Freitag, den 22. Mai 2020 wurden im Rahmen des Mobile Mapping Events
+“Nachhaltige Mobilität in Heidelberg” mithilfe von KoBoToolbox Attribute
+unserer Radwege in Heidelberg erfasst. Dabei wurden Umfragen in den
+Kategorien "Technische Ausstattung der Radinfrastruktur", "Sicherheitsgefühl
+beim Radfahren" und "Fahrgefühl" durchgeführt.
 
-### Markdown
+Die im Folgenden dargestellten Karten stellen die Ergebnisse des Fragebogens dar.
+Mit der Veranstaltung haben die disastermappers Heidelberg das Ziel, Aufmerksamkeit
+für das Thema Radverkehr im Kontext einer nachhaltigen Entwicklung zu schaffen und
+gleichzeitig Methoden der Kartenerzeugung und Geodatenkollektivierung zu vermitteln.
+Die Karten stellen daher keine Studie im Sinne eines wissenschaftlich repräsentativen
+Ergebnisses dar, sondern visualisierte Sammlungen dennoch ernstzunehmender subjektiver
+Eindrücke. Vielen Dank an alle Personen, die zu diesem Ergebnis beigetragen haben!
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Wer weiterhin Interesse daran hat, unsere Heidelberger Radwege zu bewerten,
+findet das Formular <a href="https://ee.kobotoolbox.org/x/ZZ1fUFa1">hier</a>. Die Karten
+werden in regelmäßigen Abständen (wie oft??) geupdatet. Falls Ihr weitere Fragen
+oder Feedback habt, schreibt gerne eine Nachricht an <a href = "mailto: disastermappersconnection@googlegroups.com">disastermappersconnection@googlegroups.com</a>
 
-```markdown
-Syntax highlighted code block
+Die Daten in diesem Repository sind frei verfügbar und sind über die [ODC-By v1.0](https://opendatacommons.org/licenses/by/1-0/index.html) lizensiert. Was das für die Nutzung der Daten heißt ist [hier](https://opendatacommons.org/licenses/by/summary/index.html) kurz erklärt.
 
-# Header 1
-## Header 2
-### Header 3
 
-- Bulleted
-- List
 
-1. Numbered
-2. List
 
-**Bold** and _Italic_ and `Code` text
 
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/redfrexx/mobilemapping_hd/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
