@@ -1,11 +1,9 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-
 import os
 import pandas as pd
 import plotly.graph_objects as go
-import numpy as np
 
 mapbox_access_token = "pk.eyJ1IjoiY2hsdWR3aWciLCJhIjoiY2pxM3p6cHp4MWpvaTN4cHBhOTA1aWZ4diJ9.FS-wzKCyyUVqHIADwgTkEw"
 
@@ -76,9 +74,12 @@ def clean_data(data):
                  '_Nehme deinen Standort auf_altitude', '_Nehme deinen Standort auf_precision',
                  'Nehme deinen Standort auf']
     data.drop(drop_cols, axis=1, inplace=True)
+
     # Convert lat lon to float
     data = data.rename(columns={"_Nehme deinen Standort auf_longitude": "lon",
-                                "_Nehme deinen Standort auf_latitude": "lat"})
+                                "_Nehme deinen Standort auf_latitude": "lat",
+                                'Radwegbreite ': 'Radwegbreite',
+                                'Ausstattung ': 'Ausstattung'})
     data["lat"] = data["lat"].astype("float")
     data["lon"] = data["lon"].astype("float")
 
@@ -95,7 +96,7 @@ def clean_data(data):
 
 def main():
 
-    filepath = "./data/Meinungsumfrage zu Radwegen - all versions - labels - 2020-05-21-19-12-24.csv"
+    filepath = "./data/Meinungsumfrage zu Radwegen - latest version - labels - 2020-05-22-10-54-16.csv"
     plot_dir = "./plots"
     data_dir = "./data"
 
@@ -107,12 +108,7 @@ def main():
     print("clean data ...")
     data = clean_data(data)
 
-    # fake data
-    #data = data.append([data] * 5000, ignore_index=True)
-    #data["lon"] = data["lon"] + np.random.randn(len(data))*0.005
-    #data["lat"] = data["lat"] + np.random.randn(len(data))*0.005
-    #data["Wie gut findest du den Radweg?"] = np.random.choice(list(color_dict.keys()), len(data))
-    data.to_csv(os.path.join(data_dir, "heidelberger_radwege_koboumfrage.csv"))
+    data.to_csv(os.path.join(data_dir, "heidelberger_radwege_umfrage.csv"))
 
     # Create plots -------------------------------
     print("Create plots...")
@@ -124,10 +120,11 @@ def main():
     make_plot(criteria, sub_criteria, data, outfilename)
 
     criteria = "Wie gut findest du die technische Ausstattung der Radinfrastruktur?"
-    sub_criteria= [criteria, 'lat', 'lon', 'Ausstattung: ', 'Bauliche oder markierte Trennung zu FußgängerInnen',
+    sub_criteria= [criteria, 'lat', 'lon', 'Ausstattung', 'Bauliche oder markierte Trennung zu FußgängerInnen',
            'Bauliche oder markierte Trennung von Autos', 'Bordsteinabsenkungen',
            'Beleuchtung', 'Radwegbelag', 'Radwegmarkierung', 'Radwegbreite',
-           'Rote Markierung an Kreuzungen','gibt es eine zusätzliche technische Ausstattung?'] # 'Radwegbreite ',
+           'Rote Markierung an Kreuzungen', 'Gibt es eine zusätzliche technische Ausstattung?']
+
     outfilename = os.path.join(plot_dir, "plot2.html")
     make_plot(criteria, sub_criteria, data, outfilename)
 
@@ -143,7 +140,7 @@ def main():
     sub_criteria = [criteria, 'lat', 'lon', 'Einflüsse:',
            'Fahrfluss (z.B. grüner Pfeil für Radfahrende, Fahrradampel, ...)',
            'Luftqualität', 'Lärmbelastung', 'Begrünung', 'Übersichtlichkeit',
-           'Beschattung', 'Gibt es eine zusätzliche Gefahrenquelle? .1']
+           'Beschattung', 'Gibt es zusätzliche Einflussfaktoren auf das Fahrgefühl?']
     outfilename = os.path.join(plot_dir, "plot4.html")
     make_plot(criteria, sub_criteria, data, outfilename)
 
