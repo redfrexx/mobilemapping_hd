@@ -28,14 +28,16 @@ def make_plot(criteria, sub_criteria, data, outfile, show=False):
                                                                for k, v in zip(row.index, row)
                                                                if k not in ["lat", "lon", criteria]]), axis=1)
     fig = go.Figure()
+    count = 0
     for key, col in color_dict.items():
         key_data = sub_data.loc[sub_data[criteria] == key]
+        count += len(key_data)
         fig.add_trace(go.Scattermapbox(
             lat=key_data["lat"],
             lon=key_data["lon"],
             mode='markers',
             marker=go.scattermapbox.Marker(
-                size=10,
+                size=9,
                 color=col,
             ),
             text=key_data["desc"],
@@ -96,18 +98,21 @@ def clean_data(data):
 
 def main():
 
-    filepath = "./data/Meinungsumfrage zu Radwegen - latest version - labels - 2020-05-22-10-54-16.csv"
+    filepath = "./data/Meinungsumfrage zu Radwegen - latest version - labels - 2020-05-22-17-50-20.csv"
     plot_dir = "./plots"
     data_dir = "./data"
 
     #### Read data and reformat
     data = pd.read_csv(filepath, sep=";").set_index("_index")
-    color_dict = {"sehr gut": 'rgb(0,104,55)', "gut": 'rgb(102,189,99)', "tendenziell eher gut": 'rgb(217,239,139)',
-                  "tendenziell eher schlecht": 'rgb(254,224,139)', "schlecht":'rgb(244,109,67)', "sehr schlecht": 'rgb(165,0,38)'}
+
+    # use only data starting on May 22nd
+    data["start"] = pd.to_datetime(data["start"])
+    data = data.loc[data["start"] >= "2020-05-22"]
 
     print("clean data ...")
     data = clean_data(data)
 
+    # export to file
     data.to_csv(os.path.join(data_dir, "heidelberger_radwege_umfrage.csv"))
 
     # Create plots -------------------------------
