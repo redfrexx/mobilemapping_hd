@@ -98,7 +98,7 @@ def clean_data(data):
 
 def main():
 
-    filepath = "./data/Meinungsumfrage zu Radwegen - latest version - labels - 2020-05-22-17-50-20.csv"
+    filepath = "./data/Meinungsumfrage zu Radwegen - latest version - labels - 2020-06-08-18-22-01.csv"
     plot_dir = "./plots"
     data_dir = "./data"
 
